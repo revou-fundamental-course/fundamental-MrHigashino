@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="container">
+        <img src="c:\Users\lenovo\Pictures\Logo MechForge.jpg" class="logo" alt="Logo MechForge" />
+
+        <div class="navbar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">My Profile</div>
+            <div class="nav-item">My Portfolio</div>
+            <div class="nav-item">Message Us</div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Hi there👋👋 <span id="name">-</span>. Nice to meet you!</h1>
+
+        <form class="namechanger" name="message-form" onsubmit="return validateform()">
+            <input type="text" placeholder="Nama Anda" id="name-input" name="name-input">
+            <button id="submit" type="submit">Kirim</button>
+            <p id="error-name"></p>
+        </form>
+    </header>
+
+    <main class="content">
+        <h2 class="kalimat_h2">Website Portofolio Kuliah</h2>
+        <h3>Halo semua, kenalin nama aku Asad. Mahasiswa Universitas Sriwijaya Jurusan Teknik Mesin</h3>
+        <h4>Sebagai anak teknik, kami dituntut untuk memiliki pola pikir kritis akan suatu pemecahan masalah, disamping itu kami
+            juga dituntut untuk bisa mendesain benda ataupun mesin secara 3D sebagai bahan perancangan suatu mesin.
+        </h4>
+
+        <div class="gallery">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="https://www.solidworks.com/sites/default/files/styles/large/public/files.solidworks.com/partners/card-thumbnails/1161-861-Simscape_Robot_Conveyor_Belts_thumbnail.png?itok=hMS60hUf" alt="3D Lego">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://thumbor.comeup.com/unsafe/fit-in/630x354/filters:quality(90):no_upscale()/uploads/media/picture/2024-01-28/1-65b6bafeedc46.jpg" alt="Industrial Robotic Arm">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/9e6aa9bf2953e9a05e6cbc14a957897e/large.jpg" alt="Soap Holder">
+                </div>
+
+                <!-- Tombol prev/next -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- Dot indikator -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="table_person">
+                <tr>
+                    <th>No</th>
+                    <th>SOFTWARE</th>
+                    <th>EXPERTNESS</th>
+                    <th>PRICE</th>
+                    <th>Portfolio</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SOLID WORKS</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>25$/hour</td>
+                    <td><a href="#">Klik disini</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AUTO CAD</td>
+                    <td>⭐⭐⭐</td>
+                    <td>20$/hour</td>
+                    <td><a href="#">Klik disini</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ANSYS</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>30$/hour</td>
+                    <td><a href="#">Klik disini</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>REVIT 3D</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>27$/hour</td>
+                    <td><a href="#">Klik disini</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <form class="validateform" name="message-form2" onsubmit="return validatesecondform()">  
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td> 
+                    <td><input class="a" placeholder="Nama" type="text" name="full-name" /></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><input type="date" name="birth-date" /></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" />
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label for="female">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pesan</td>
+                    <td>:</td>
+                    <td><textarea placeholder="Pesan" name="messages"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        <input type="submit" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="sender">
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis kelamin: <span id="sender-gender"></span></p>
+            <p>Pesan: <span id="sender-messages"></span></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>@MechForgeStudio 2024</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
